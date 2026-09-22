@@ -1,0 +1,23 @@
+generated: '2026-09-21'
+method: searched
+generator: extract-docs-artifacts.py (local)
+source: https://www.inoreader.com/blog/2014/07/auto-push-deprecation.html
+sources:
+- https://www.inoreader.com/blog/2014/07/auto-push-deprecation.html
+- https://www.inoreader.com/blog/2025/01/deprecation-of-social-features.html
+entries:
+- breaking: true
+  highlights:
+  - With the rollout of Inoreader’s new design in October 2024, we introduced a streamlined approach focused on discovering, consuming, and organizing
+    content.
+  - As part of this update, we made the decision to sunset several social features due to low usage and limitations in their user experience.
+  - Social features will continue to be supported in the old Inoreader version until March 31, 2025.
+  date: '2025-01-09'
+- breaking: true
+  highlights:
+  - There’s been an obscure little feature in our reader called Auto Push.
+  - These recent developments cause the Auto Push feature to effectively become redundant and today we are announcing its deprecation.
+  - It will be available until Sept 1st 2014, but you won’t be able to create new records.
+  date: '2014-07-18'
+note: The pages do not specify a versioning scheme or a current version number.
+docs: https://www.inoreader.com/blog/2014/07/auto-push-deprecation.html

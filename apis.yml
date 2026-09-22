@@ -1,23 +1,101 @@
 aid: inoreader
+
 name: Inoreader
-description: 'Inoreader is a company surfaced via the API Evangelist harvest backlog (source: news) and
-  added to the network as a stub for full-pipeline profiling.'
+
+image: https://www.inoreader.com/images/landing/v4/og-images/og-image-default.png
+
+description: Inoreader provides a powerful RSS feed reader and content aggregation platform that lets users subscribe to, organize, and share
+  web content. It offers features such as automated tagging, rules for filtering, offline access, and collaborative sharing for teams. The service
+  includes a developer API that enables programmatic access to feed data, article content, and user actions, supporting integration with third‑party
+  applications and custom workflows.
+
 url: https://raw.githubusercontent.com/api-evangelist/inoreader/refs/heads/main/apis.yml
+
 x-type: company
+
 x-source: harvest:news
-x-tier: stub
-x-tier-reason: harvest
+
+x-tier: profiled
+x-tier-reason: enrichment pass 2026-09-21 (modular-v1; was harvest)
+
 specificationVersion: '0.20'
+
 created: '2026-09-21'
+
 modified: '2026-09-21'
+
 tags:
 - Company
-apis: []
+- RSS
+- Content Aggregation
+- API
+- Productivity
+
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
+
 common:
+- type: RateLimits
+  url: rate-limits/inoreader-rate-limits.yml
+- type: Plans
+  url: plans/inoreader-plans-pricing.yml
+- type: ChangeLog
+  url: changelog/inoreader-changelog.yml
+- type: X-MCPServerCandidate
+  url: mcp/inoreader-mcp.yml
+- type: SDKs
+  url: packages/inoreader-packages.yml
+- type: Packages
+  url: packages/inoreader-packages.yml
+- type: StatusPage
+  url: https://status.inoreader.com/
+- type: Leadership
+  url: https://www.inoreader.com/discover/topic/business/management
+- type: x-coverage
+  state: unreadable
+  reason: no-machine-readable-spec
+  detail: No OpenAPI or other machine‑readable contract was found on the API host.
+  evidence:
+  - url: https://api.inoreader.com/openapi.json
+    status: failed
+  checked: 2026-09-21
+- type: DomainSecurity
+  url: security/inoreader-domain-security.yml
 - type: Website
   url: https://inoreader.com/
+- type: DeveloperPortal
+  url: https://www.inoreader.com/developers/
+- type: Documentation
+  url: https://www.inoreader.com/developers/
+- type: APIReference
+  url: https://www.inoreader.com/developers/api-endpoint
+- type: GettingStarted
+  url: https://www.inoreader.com/developers/register-app
+- type: Support
+  url: https://www.inoreader.com/contact
+- type: Blog
+  url: https://www.inoreader.com/blog
+- type: Pricing
+  url: https://www.inoreader.com/pricing
+- type: SignUp
+  url: https://www.inoreader.com/signup
+- type: TermsOfService
+  url: https://www.inoreader.com/tos
+- type: PrivacyPolicy
+  url: https://www.inoreader.com/privacy_policy
+
+apis:
+- name: Inoreader API
+  description: Programmatic access to Inoreader feed data and user actions.
+  humanURL: https://www.inoreader.com/developers/
+  baseURL: null
+  aid: inoreader:inoreader-api
+x-enrichment:
+  date: '2026-09-21'
+  status: enriched
+  artifacts_added: 7
+  pass: modular-v1
+  engine: identity=local,contract=local,surfaces=local,docs=local

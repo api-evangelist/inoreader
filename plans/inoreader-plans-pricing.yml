@@ -1,0 +1,25 @@
+generated: '2026-09-21'
+method: searched
+generator: extract-docs-artifacts.py (local)
+source: https://www.inoreader.com/pricing
+sources:
+- https://www.inoreader.com/pricing
+- https://www.inoreader.com/blog/2014/10/easily-view-your-billing-information.html
+- https://www.inoreader.com/blog/2019/02/increased-limits-on-rules-in-the-new-pro-plan.html
+name: Inoreader pricing
+audience: business-product
+pricing_basis: free
+plans:
+- name: Free
+  price_text: Free
+  description: Great for beginners. Follow RSS feeds, search in your articles, get Google News alerts, and customize your view.
+- name: Pro
+  price_text: $7.50 /month
+  price: 7.5
+  description: Create monitoring feeds, apply filters and rules, and subscribe to newsletters. Follow social media feeds and websites without
+    RSS.
+- name: Enterprise
+  price_text: Request quote
+  description: Build a plan that suits your needs with our special add-ons (Web feeds, monitoring feeds, boosted feeds, and other features) and
+    access our API.
+docs: https://www.inoreader.com/pricing

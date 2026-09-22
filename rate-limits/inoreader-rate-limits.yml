@@ -1,0 +1,30 @@
+generated: '2026-09-21'
+method: searched
+generator: extract-docs-artifacts.py (local)
+source: https://www.inoreader.com/developers/rate-limiting
+sources:
+- https://www.inoreader.com/developers/rate-limiting
+- https://www.inoreader.com/blog/2026/04/new-combined-filter-quotas.html
+- https://www.inoreader.com/login?sendback=%2Ffeed%2Fhttp%253A%252F%252Fwww.quotationspage.com%252Fdata%252Fqotd.rss
+name: Inoreader rate limits
+limits:
+- name: Zone 1
+  limit_text: 100 requests per day
+  max: 100
+  window: day
+  scope: Pro plan default
+  plan: Pro
+- name: Zone 2
+  limit_text: 100 requests per day
+  max: 100
+  window: day
+  scope: Pro plan default
+  plan: Pro
+headers:
+- X-Reader-Zone1-Limit
+- X-Reader-Zone2-Limit
+- X-Reader-Zone1-Usage
+- X-Reader-Zone2-Usage
+- X-Reader-Limits-Reset-After
+note: Exhaustion HTTP status not published on the pages.
+docs: https://www.inoreader.com/developers/rate-limiting
