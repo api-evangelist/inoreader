@@ -1,0 +1,32 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/inoreader/main/json-schema/inoreader-post-oauth2-token-response-schema.json",
+  "title": "PostOauth2TokenResponse",
+  "x-generated": "2026-09-22",
+  "x-method": "derived",
+  "x-generator": "derive-json-schema.py",
+  "x-source": "openapi/_ae-authored/inoreader-openapi-generated.yml#/components/schemas/PostOauth2TokenResponse",
+  "type": "object",
+  "properties": {
+    "access_token": {
+      "type": "string",
+      "description": "Access token to use in API calls"
+    },
+    "token_type": {
+      "type": "string",
+      "description": "Token type, e.g., \"Bearer\""
+    },
+    "expires_in": {
+      "type": "integer",
+      "description": "Expiration time in seconds"
+    },
+    "refresh_token": {
+      "type": "string",
+      "description": "Refresh token for obtaining new access tokens"
+    },
+    "scope": {
+      "type": "string",
+      "description": "Granted scope"
+    }
+  }
+}

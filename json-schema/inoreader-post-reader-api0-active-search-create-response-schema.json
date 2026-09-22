@@ -1,0 +1,24 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/inoreader/main/json-schema/inoreader-post-reader-api0-active-search-create-response-schema.json",
+  "title": "PostReaderApi0ActiveSearchCreateResponse",
+  "x-generated": "2026-09-22",
+  "x-method": "derived",
+  "x-generator": "derive-json-schema.py",
+  "x-source": "openapi/_ae-authored/inoreader-openapi-generated.yml#/components/schemas/PostReaderApi0ActiveSearchCreateResponse",
+  "type": "object",
+  "properties": {
+    "200": {
+      "type": "string",
+      "description": "{\"id\":\"feed\\/keyword-monitoring-AbCdEf\",\"title\":\"amazing\"}. id is the stream id of the created active search."
+    },
+    "400": {
+      "type": "string",
+      "description": "Typical API errors."
+    },
+    "202": {
+      "type": "string",
+      "description": "JSON response with \"error\", full detailed object with errors during process of validation. May include additional keys: \"accountLimit\" (integer), \"userOutput\" (\"1\"), \"needUpgrade\" (\"1\")."
+    }
+  }
+}

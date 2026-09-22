@@ -1,0 +1,113 @@
+{
+  "@context": {
+    "@vocab": "https://inoreader.com/schema#",
+    "schema": "https://schema.org/",
+    "xsd": "http://www.w3.org/2001/XMLSchema#",
+    "dcterms": "http://purl.org/dc/terms/",
+    "inoreader": "https://inoreader.com/schema#",
+    "PostAccountsClientloginResponse": "inoreader:PostAccountsClientloginResponse",
+    "SID": {
+      "@id": "inoreader:SID",
+      "@type": "xsd:string"
+    },
+    "LSID": {
+      "@id": "inoreader:LSID",
+      "@type": "xsd:string"
+    },
+    "Auth": {
+      "@id": "inoreader:Auth",
+      "@type": "xsd:string"
+    },
+    "PostOauth2TokenRequest": "inoreader:PostOauth2TokenRequest",
+    "code": {
+      "@id": "inoreader:code",
+      "@type": "xsd:string"
+    },
+    "redirect_uri": {
+      "@id": "inoreader:redirect_uri",
+      "@type": "xsd:string"
+    },
+    "client_id": {
+      "@id": "inoreader:client_id",
+      "@type": "xsd:string"
+    },
+    "client_secret": {
+      "@id": "inoreader:client_secret",
+      "@type": "xsd:string"
+    },
+    "scope": {
+      "@id": "inoreader:scope",
+      "@type": "xsd:string"
+    },
+    "grant_type": {
+      "@id": "inoreader:grant_type",
+      "@type": "xsd:string"
+    },
+    "PostOauth2TokenResponse": "inoreader:PostOauth2TokenResponse",
+    "access_token": {
+      "@id": "inoreader:access_token",
+      "@type": "xsd:string"
+    },
+    "token_type": {
+      "@id": "inoreader:token_type",
+      "@type": "xsd:string"
+    },
+    "expires_in": {
+      "@id": "inoreader:expires_in",
+      "@type": "xsd:integer"
+    },
+    "refresh_token": {
+      "@id": "inoreader:refresh_token",
+      "@type": "xsd:string"
+    },
+    "PostReaderApi0ActiveSearchCreateRequest": "inoreader:PostReaderApi0ActiveSearchCreateRequest",
+    "term": {
+      "@id": "inoreader:term",
+      "@type": "xsd:string"
+    },
+    "filter_type": {
+      "@id": "inoreader:filter_type",
+      "@type": "xsd:string"
+    },
+    "filter_id": {
+      "@id": "inoreader:filter_id",
+      "@type": "xsd:string"
+    },
+    "article_ids": {
+      "@id": "inoreader:article_ids",
+      "@container": "@list"
+    },
+    "search_filters": {
+      "@id": "inoreader:search_filters",
+      "@type": "xsd:string"
+    },
+    "search_match": {
+      "@id": "inoreader:search_match",
+      "@type": "xsd:string"
+    },
+    "search_feed_popularity": {
+      "@id": "inoreader:search_feed_popularity",
+      "@type": "xsd:string"
+    },
+    "PostReaderApi0ActiveSearchCreateResponse": "inoreader:PostReaderApi0ActiveSearchCreateResponse",
+    "PostReaderApi0DisableTagResponse": "inoreader:PostReaderApi0DisableTagResponse",
+    "OK": {
+      "@id": "inoreader:OK",
+      "@type": "xsd:string"
+    },
+    "PostReaderApi0EditTagResponse": "inoreader:PostReaderApi0EditTagResponse",
+    "body": {
+      "@id": "inoreader:body",
+      "@type": "xsd:string"
+    },
+    "PostReaderApi0PreferenceStreamSetResponse": "inoreader:PostReaderApi0PreferenceStreamSetResponse",
+    "PostReaderApi0RenameTagResponse": "inoreader:PostReaderApi0RenameTagResponse"
+  },
+  "@type": "schema:Dataset",
+  "schema:name": "Inoreader API JSON-LD context",
+  "schema:description": "A JSON-LD @context for the objects Inoreader's own API contract declares: one class per component schema, one property per declared field, typed from the contract. Derived by script (derive-json-ld.py, 2026-09-22) from openapi/_ae-authored/inoreader-openapi-generated.yml.",
+  "dcterms:created": "2026-09-22",
+  "dcterms:source": [
+    "openapi/_ae-authored/inoreader-openapi-generated.yml"
+  ]
+}

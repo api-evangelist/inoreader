@@ -1,43 +1,45 @@
 aid: inoreader
-
 name: Inoreader
-
 image: https://www.inoreader.com/images/landing/v4/og-images/og-image-default.png
-
 description: Inoreader provides a powerful RSS feed reader and content aggregation platform that lets users subscribe to, organize, and share
   web content. It offers features such as automated tagging, rules for filtering, offline access, and collaborative sharing for teams. The service
   includes a developer API that enables programmatic access to feed data, article content, and user actions, supporting integration with third‑party
   applications and custom workflows.
-
 url: https://raw.githubusercontent.com/api-evangelist/inoreader/refs/heads/main/apis.yml
-
 x-type: company
-
 x-source: harvest:news
-
 x-tier: profiled
 x-tier-reason: enrichment pass 2026-09-21 (modular-v1; was harvest)
-
 specificationVersion: '0.20'
-
 created: '2026-09-21'
-
 modified: '2026-09-21'
-
 tags:
+- Company
+- RSS
+- Content Aggregation
+- Productivity
+tags_raw:
 - Company
 - RSS
 - Content Aggregation
 - API
 - Productivity
-
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
-
 common:
+- type: Spectral
+  url: rules/inoreader-rules.yml
+- type: JSONLD
+  url: json-ld/inoreader-context.jsonld
+- type: Vocabulary
+  url: vocabulary/inoreader-vocabulary.yml
+- type: DataModel
+  url: data-model/inoreader-data-model.yml
+- type: Conformance
+  url: conformance/inoreader-conformance.yml
 - type: RateLimits
   url: rate-limits/inoreader-rate-limits.yml
 - type: Plans
@@ -86,13 +88,34 @@ common:
   url: https://www.inoreader.com/tos
 - type: PrivacyPolicy
   url: https://www.inoreader.com/privacy_policy
-
 apis:
 - name: Inoreader API
   description: Programmatic access to Inoreader feed data and user actions.
   humanURL: https://www.inoreader.com/developers/
   baseURL: null
   aid: inoreader:inoreader-api
+- aid: inoreader:inoreader-api
+  name: Inoreader API
+  description: 'Inoreader API as documented publicly: 10 operations. Contract generated from the documentation by API Evangelist (2026-09-22);
+
+    not the provider''s own document.'
+  humanURL: https://www.inoreader.com/developers/preference-set
+  properties:
+  - type: OpenAPI
+    url: openapi/_ae-authored/inoreader-openapi-generated.yml
+    x-provenance: generated
+  - type: JSONSchema
+    url: json-schema/inoreader-post-reader-api0-active-search-create-request-schema.json
+  - type: JSONSchema
+    url: json-schema/inoreader-post-oauth2-token-request-schema.json
+  - type: JSONSchema
+    url: json-schema/inoreader-post-reader-api0-active-search-create-response-schema.json
+  - type: JSONSchema
+    url: json-schema/inoreader-post-oauth2-token-response-schema.json
+  - type: JSONSchema
+    url: json-schema/inoreader-post-accounts-clientlogin-response-schema.json
+  - type: JSONSchema
+    url: json-schema/inoreader-post-reader-api0-rename-tag-response-schema.json
 x-enrichment:
   date: '2026-09-21'
   status: enriched

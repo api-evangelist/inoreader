@@ -1,0 +1,24 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/inoreader/main/json-schema/inoreader-post-accounts-clientlogin-response-schema.json",
+  "title": "PostAccountsClientloginResponse",
+  "x-generated": "2026-09-22",
+  "x-method": "derived",
+  "x-generator": "derive-json-schema.py",
+  "x-source": "openapi/_ae-authored/inoreader-openapi-generated.yml#/components/schemas/PostAccountsClientloginResponse",
+  "type": "object",
+  "properties": {
+    "SID": {
+      "type": "string",
+      "description": "Session ID (null in example)."
+    },
+    "LSID": {
+      "type": "string",
+      "description": "Long-lived Session ID (null in example)."
+    },
+    "Auth": {
+      "type": "string",
+      "description": "Authentication token to be used in subsequent API calls."
+    }
+  }
+}

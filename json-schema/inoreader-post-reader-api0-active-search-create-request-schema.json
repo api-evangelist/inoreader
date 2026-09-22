@@ -1,0 +1,44 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/inoreader/main/json-schema/inoreader-post-reader-api0-active-search-create-request-schema.json",
+  "title": "PostReaderApi0ActiveSearchCreateRequest",
+  "x-generated": "2026-09-22",
+  "x-method": "derived",
+  "x-generator": "derive-json-schema.py",
+  "x-source": "openapi/_ae-authored/inoreader-openapi-generated.yml#/components/schemas/PostReaderApi0ActiveSearchCreateRequest",
+  "type": "object",
+  "properties": {
+    "term": {
+      "type": "string",
+      "description": "keyword or phrase to search for. It becomes title of active search"
+    },
+    "filter_type": {
+      "type": "string",
+      "description": "expects one of values from [\"folder\", \"subscription\", \"public\"]"
+    },
+    "filter_id": {
+      "type": "string",
+      "description": "long format ID of filter_type (mandatory if filter_type != \"public\")"
+    },
+    "article_ids": {
+      "type": "array",
+      "description": "Array of articles ids. Accepts empty arrays."
+    },
+    "search_filters": {
+      "type": "string",
+      "description": "expects one of values from [\"all\", \"titles\", \"contents\"]. Default = \"all\""
+    },
+    "search_match": {
+      "type": "string",
+      "description": "expects one of values from [\"all_words\", \"any_word\", \"full_phrase\", \"advanced\"]. Default = \"all_words\""
+    },
+    "search_feed_popularity": {
+      "type": "string",
+      "description": "expects one of values from [\"all_sites\", \"popular_sites\", \"most_popular_sites\"]. Default = \"all_sites\". Property is in effect only if filter_type = \"public\""
+    }
+  },
+  "required": [
+    "term",
+    "filter_type"
+  ]
+}
