@@ -1,0 +1,65 @@
+openapi: 3.2.0
+info:
+  title: Inoreader Accounts API
+  version: '2026-09-22'
+  description: 'GENERATED FROM DOCUMENTATION by API Evangelist on 2026-09-22: 10 operation(s) read from 9 public documentation page(s) (each operation names its page in x-source). This is not the provider''s published contract; Inoreader has published no machine-readable contract that the pipeline could find. Engine: local.'
+  x-generated-from: documentation
+  x-provenance: generated
+  x-authored-by: API Evangelist
+  x-generated: '2026-09-22'
+  x-generator: generate-contract-from-docs.py
+  x-engine: local
+  x-sources:
+  - https://www.inoreader.com/developers/preference-set
+  - https://www.inoreader.com/developers/auth
+  - https://www.inoreader.com/developers/oauth
+  - https://www.inoreader.com/developers/app-auth
+  - https://www.inoreader.com/developers/edit-tag
+  - https://www.inoreader.com/developers/delete-tag
+  - https://www.inoreader.com/developers/rename-tag
+  - https://www.inoreader.com/developers/active-search-create
+  - https://www.inoreader.com/developers/active-search-delete
+tags:
+- name: Accounts
+paths:
+  /accounts/ClientLogin:
+    post:
+      operationId: post_accounts_ClientLogin
+      tags:
+      - Accounts
+      summary: User authentication (ClientLogin)
+      x-source: https://www.inoreader.com/developers/auth
+      parameters:
+      - name: Email
+        in: query
+        required: true
+        schema:
+          type: string
+        description: username or email of the user.
+      - name: Passwd
+        in: query
+        required: true
+        schema:
+          type: string
+        description: password of the user.
+      responses:
+        '200':
+          description: Success (status as documented)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PostAccountsClientloginResponse'
+components:
+  schemas:
+    PostAccountsClientloginResponse:
+      type: object
+      properties:
+        SID:
+          type: string
+          description: Session ID (null in example).
+        LSID:
+          type: string
+          description: Long-lived Session ID (null in example).
+        Auth:
+          type: string
+          description: Authentication token to be used in subsequent API calls.

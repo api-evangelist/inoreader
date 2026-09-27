@@ -1,0 +1,283 @@
+openapi: 3.2.0
+info:
+  title: Inoreader Reader API
+  version: '2026-09-22'
+  description: 'GENERATED FROM DOCUMENTATION by API Evangelist on 2026-09-22: 10 operation(s) read from 9 public documentation page(s) (each operation names its page in x-source). This is not the provider''s published contract; Inoreader has published no machine-readable contract that the pipeline could find. Engine: local.'
+  x-generated-from: documentation
+  x-provenance: generated
+  x-authored-by: API Evangelist
+  x-generated: '2026-09-22'
+  x-generator: generate-contract-from-docs.py
+  x-engine: local
+  x-sources:
+  - https://www.inoreader.com/developers/preference-set
+  - https://www.inoreader.com/developers/auth
+  - https://www.inoreader.com/developers/oauth
+  - https://www.inoreader.com/developers/app-auth
+  - https://www.inoreader.com/developers/edit-tag
+  - https://www.inoreader.com/developers/delete-tag
+  - https://www.inoreader.com/developers/rename-tag
+  - https://www.inoreader.com/developers/active-search-create
+  - https://www.inoreader.com/developers/active-search-delete
+tags:
+- name: Reader
+paths:
+  /reader/api/0/active_search/create:
+    post:
+      operationId: post_reader_api_0_active_search_create
+      tags:
+      - Reader
+      summary: Create Active Search
+      description: This method creates new active search for current user. Creating of a new active search follows user account limitations.
+      x-source: https://www.inoreader.com/developers/active-search-create
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PostReaderApi0ActiveSearchCreateRequest'
+      responses:
+        '201':
+          description: Success (status as documented)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PostReaderApi0ActiveSearchCreateResponse'
+  /reader/api/0/active_search/delete:
+    get:
+      operationId: get_reader_api_0_active_search_delete
+      tags:
+      - Reader
+      summary: Delete active search
+      description: This method is used to delete an active search.
+      x-source: https://www.inoreader.com/developers/active-search-delete
+      parameters:
+      - name: id
+        in: query
+        required: true
+        schema:
+          type: string
+        description: Mandatory parameter
+      responses:
+        '200':
+          description: Success (status as documented)
+  /reader/api/0/disable-tag:
+    post:
+      operationId: post_reader_api_0_disable_tag
+      tags:
+      - Reader
+      summary: Delete tag
+      description: This method is used to delete tags and folders
+      x-source: https://www.inoreader.com/developers/delete-tag
+      parameters:
+      - name: s
+        in: query
+        required: true
+        schema:
+          type: string
+        description: full tag name, like user/-/label/Tech
+      responses:
+        '200':
+          description: Success (status as documented)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PostReaderApi0DisableTagResponse'
+  /reader/api/0/edit-tag:
+    post:
+      operationId: post_reader_api_0_edit_tag
+      tags:
+      - Reader
+      summary: This method is a lot more complex than Rename tag and Delete tag
+      description: It is used to assign tags to articles. Not only user-created tags, but also system ones. For example it is used to mark articles as read, or to star them.
+      x-source: https://www.inoreader.com/developers/edit-tag
+      parameters:
+      - name: a
+        in: query
+        required: false
+        schema:
+          type: string
+        description: tag to add
+      - name: r
+        in: query
+        required: false
+        schema:
+          type: string
+        description: tag to remove
+      - name: i
+        in: query
+        required: true
+        schema:
+          type: string
+        description: 'item ID. Can accept two types of values (see Article ID formats ), whichever you prefer: tag:google.com,2005:reader/item/1234567890 or 1234567890 (shortened ID, preferred as it saves bandwidth). Additionally i can be an array of IDs instead of a scalar value, so you can tag multiple items at once'
+      responses:
+        '201':
+          description: Success (status as documented)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PostReaderApi0EditTagResponse'
+  /reader/api/0/preference/stream/set:
+    post:
+      operationId: post_reader_api_0_preference_stream_set
+      tags:
+      - Reader
+      summary: Set stream preferences
+      description: This method is mainly used to save custom feed ordering if such functionality is incorporated in the client.
+      x-source: https://www.inoreader.com/developers/preference-set
+      parameters:
+      - name: s
+        in: query
+        required: true
+        schema:
+          type: string
+        description: Stream ID (e.g., user/-/state/com.google/root or user/-/label/MIT)
+      - name: k
+        in: query
+        required: true
+        schema:
+          type: string
+        description: Key. Only accepted is subscription-ordering
+      - name: v
+        in: query
+        required: true
+        schema:
+          type: string
+        description: Value. For subscription-ordering this is concatenated string from subscriptions and folders Sort IDs in the desired order
+      responses:
+        '201':
+          description: Success (status as documented)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PostReaderApi0PreferenceStreamSetResponse'
+  /reader/api/0/rename-tag:
+    post:
+      operationId: post_reader_api_0_rename_tag
+      tags:
+      - Reader
+      summary: This method is used to rename tags and folders
+      description: Rename tag
+      x-source: https://www.inoreader.com/developers/rename-tag
+      parameters:
+      - name: s
+        in: query
+        required: true
+        schema:
+          type: string
+        description: Source name (full tag name, e.g., user/-/label/Tech)
+      - name: dest
+        in: query
+        required: true
+        schema:
+          type: string
+        description: Target name (cannot contain forward slashes)
+      responses:
+        '200':
+          description: Success (status as documented)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PostReaderApi0RenameTagResponse'
+  /reader/api/0/subscription/list:
+    post:
+      operationId: post_reader_api_0_subscription_list
+      tags:
+      - Reader
+      summary: App authentication
+      x-source: https://www.inoreader.com/developers/app-auth
+      parameters:
+      - name: AppId
+        in: header
+        required: true
+        schema:
+          type: string
+      - name: AppKey
+        in: header
+        required: true
+        schema:
+          type: string
+      - name: Authorization
+        in: header
+        required: false
+        schema:
+          type: string
+      responses:
+        '201':
+          description: Success (status as documented)
+  /reader/api/0/user-info:
+    get:
+      operationId: get_reader_api_0_user_info
+      tags:
+      - Reader
+      summary: Get information about the current user
+      description: Returns a JSON object containing information about the current user. Requires Authorization header with Bearer token.
+      x-source: https://www.inoreader.com/developers/oauth
+      responses:
+        '200':
+          description: Success (status as documented)
+components:
+  schemas:
+    PostReaderApi0DisableTagResponse:
+      type: object
+      properties:
+        OK:
+          type: string
+          description: Successful deletion
+    PostReaderApi0RenameTagResponse:
+      type: object
+      properties:
+        OK:
+          type: string
+          description: Successful rename operation
+    PostReaderApi0EditTagResponse:
+      type: object
+      properties:
+        body:
+          type: string
+          description: OK
+    PostReaderApi0PreferenceStreamSetResponse:
+      type: object
+      properties:
+        body:
+          type: string
+          description: OK
+    PostReaderApi0ActiveSearchCreateResponse:
+      type: object
+      properties:
+        '200':
+          type: string
+          description: '{"id":"feed\/keyword-monitoring-AbCdEf","title":"amazing"}. id is the stream id of the created active search.'
+        '400':
+          type: string
+          description: Typical API errors.
+        '202':
+          type: string
+          description: 'JSON response with "error", full detailed object with errors during process of validation. May include additional keys: "accountLimit" (integer), "userOutput" ("1"), "needUpgrade" ("1").'
+    PostReaderApi0ActiveSearchCreateRequest:
+      type: object
+      properties:
+        term:
+          type: string
+          description: keyword or phrase to search for. It becomes title of active search
+        filter_type:
+          type: string
+          description: expects one of values from ["folder", "subscription", "public"]
+        filter_id:
+          type: string
+          description: long format ID of filter_type (mandatory if filter_type != "public")
+        article_ids:
+          type: array
+          description: Array of articles ids. Accepts empty arrays.
+        search_filters:
+          type: string
+          description: expects one of values from ["all", "titles", "contents"]. Default = "all"
+        search_match:
+          type: string
+          description: expects one of values from ["all_words", "any_word", "full_phrase", "advanced"]. Default = "all_words"
+        search_feed_popularity:
+          type: string
+          description: expects one of values from ["all_sites", "popular_sites", "most_popular_sites"]. Default = "all_sites". Property is in effect only if filter_type = "public"
+      required:
+      - term
+      - filter_type

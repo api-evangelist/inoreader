@@ -89,21 +89,57 @@ common:
 - type: PrivacyPolicy
   url: https://www.inoreader.com/privacy_policy
 apis:
-- name: Inoreader API
-  description: Programmatic access to Inoreader feed data and user actions.
+- aid: inoreader:inoreader-accounts-api
+  name: Inoreader Accounts API
+  description: The Accounts API from Inoreader — 1 operation(s) for accounts.
   humanURL: https://www.inoreader.com/developers/
-  baseURL: null
-  aid: inoreader:inoreader-api
-- aid: inoreader:inoreader-api
-  name: Inoreader API
-  description: 'Inoreader API as documented publicly: 10 operations. Contract generated from the documentation by API Evangelist (2026-09-22);
-
-    not the provider''s own document.'
-  humanURL: https://www.inoreader.com/developers/preference-set
+  tags:
+  - Accounts
   properties:
   - type: OpenAPI
-    url: openapi/_ae-authored/inoreader-openapi-generated.yml
-    x-provenance: generated
+    url: openapi/inoreader-accounts-api-openapi.yml
+  - type: JSONSchema
+    url: json-schema/inoreader-post-reader-api0-active-search-create-request-schema.json
+  - type: JSONSchema
+    url: json-schema/inoreader-post-oauth2-token-request-schema.json
+  - type: JSONSchema
+    url: json-schema/inoreader-post-reader-api0-active-search-create-response-schema.json
+  - type: JSONSchema
+    url: json-schema/inoreader-post-oauth2-token-response-schema.json
+  - type: JSONSchema
+    url: json-schema/inoreader-post-accounts-clientlogin-response-schema.json
+  - type: JSONSchema
+    url: json-schema/inoreader-post-reader-api0-rename-tag-response-schema.json
+- aid: inoreader:inoreader-oauth2-api
+  name: Inoreader Oauth2 API
+  description: The Oauth2 API from Inoreader — 1 operation(s) for oauth2.
+  humanURL: https://www.inoreader.com/developers/
+  tags:
+  - Oauth2
+  properties:
+  - type: OpenAPI
+    url: openapi/inoreader-oauth2-api-openapi.yml
+  - type: JSONSchema
+    url: json-schema/inoreader-post-reader-api0-active-search-create-request-schema.json
+  - type: JSONSchema
+    url: json-schema/inoreader-post-oauth2-token-request-schema.json
+  - type: JSONSchema
+    url: json-schema/inoreader-post-reader-api0-active-search-create-response-schema.json
+  - type: JSONSchema
+    url: json-schema/inoreader-post-oauth2-token-response-schema.json
+  - type: JSONSchema
+    url: json-schema/inoreader-post-accounts-clientlogin-response-schema.json
+  - type: JSONSchema
+    url: json-schema/inoreader-post-reader-api0-rename-tag-response-schema.json
+- aid: inoreader:inoreader-reader-api
+  name: Inoreader Reader API
+  description: The Reader API from Inoreader — 8 operation(s) for reader.
+  humanURL: https://www.inoreader.com/developers/
+  tags:
+  - Reader
+  properties:
+  - type: OpenAPI
+    url: openapi/inoreader-reader-api-openapi.yml
   - type: JSONSchema
     url: json-schema/inoreader-post-reader-api0-active-search-create-request-schema.json
   - type: JSONSchema

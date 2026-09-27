@@ -1,0 +1,20 @@
+{
+  "provider": "inoreader",
+  "sources": [
+    "_ae-authored/inoreader-openapi-generated.yml"
+  ],
+  "outputs": [
+    "inoreader-accounts-api-openapi.yml",
+    "inoreader-oauth2-api-openapi.yml",
+    "inoreader-reader-api-openapi.yml"
+  ],
+  "archived": [],
+  "errors": [],
+  "warnings": [],
+  "notes": [
+    "sourced from openapi/_original/ (0 archived document(s)); previously refined output at the top level was skipped rather than re-split",
+    "inoreader-openapi-generated.yml: upgraded openapi 3.1.0 -> OpenAPI 3.2.0",
+    "apis.yml register: written (+3 apis, 3 total)"
+  ],
+  "skipped": []
+}

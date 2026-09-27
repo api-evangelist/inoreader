@@ -1,0 +1,92 @@
+openapi: 3.2.0
+info:
+  title: Inoreader Oauth2 API
+  version: '2026-09-22'
+  description: 'GENERATED FROM DOCUMENTATION by API Evangelist on 2026-09-22: 10 operation(s) read from 9 public documentation page(s) (each operation names its page in x-source). This is not the provider''s published contract; Inoreader has published no machine-readable contract that the pipeline could find. Engine: local.'
+  x-generated-from: documentation
+  x-provenance: generated
+  x-authored-by: API Evangelist
+  x-generated: '2026-09-22'
+  x-generator: generate-contract-from-docs.py
+  x-engine: local
+  x-sources:
+  - https://www.inoreader.com/developers/preference-set
+  - https://www.inoreader.com/developers/auth
+  - https://www.inoreader.com/developers/oauth
+  - https://www.inoreader.com/developers/app-auth
+  - https://www.inoreader.com/developers/edit-tag
+  - https://www.inoreader.com/developers/delete-tag
+  - https://www.inoreader.com/developers/rename-tag
+  - https://www.inoreader.com/developers/active-search-create
+  - https://www.inoreader.com/developers/active-search-delete
+tags:
+- name: OAuth2
+paths:
+  /oauth2/token:
+    post:
+      operationId: post_oauth2_token
+      tags:
+      - OAuth2
+      summary: Obtain access and refresh tokens
+      description: Exchange an authorization code for access and refresh tokens, or refresh an access token.
+      x-source: https://www.inoreader.com/developers/oauth
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PostOauth2TokenRequest'
+      responses:
+        '201':
+          description: Success (status as documented)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PostOauth2TokenResponse'
+components:
+  schemas:
+    PostOauth2TokenRequest:
+      type: object
+      properties:
+        code:
+          type: string
+          description: Authorization code received from the consent page
+        redirect_uri:
+          type: string
+          description: Redirect URI used in the OAuth flow
+        client_id:
+          type: string
+          description: Client ID from app registration
+        client_secret:
+          type: string
+          description: Client secret from app registration
+        scope:
+          type: string
+          description: Scope parameter (may be empty)
+        grant_type:
+          type: string
+          description: Must be "authorization_code" for initial token exchange
+      required:
+      - code
+      - redirect_uri
+      - client_id
+      - client_secret
+      - grant_type
+    PostOauth2TokenResponse:
+      type: object
+      properties:
+        access_token:
+          type: string
+          description: Access token to use in API calls
+        token_type:
+          type: string
+          description: Token type, e.g., "Bearer"
+        expires_in:
+          type: integer
+          description: Expiration time in seconds
+        refresh_token:
+          type: string
+          description: Refresh token for obtaining new access tokens
+        scope:
+          type: string
+          description: Granted scope
