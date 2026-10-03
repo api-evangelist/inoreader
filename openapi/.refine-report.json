@@ -14,7 +14,11 @@
   "notes": [
     "sourced from openapi/_original/ (0 archived document(s)); previously refined output at the top level was skipped rather than re-split",
     "inoreader-openapi-generated.yml: upgraded openapi 3.1.0 -> OpenAPI 3.2.0",
-    "apis.yml register: written (+3 apis, 3 total)"
+    "apis.yml register: already-registered"
   ],
-  "skipped": []
+  "skipped": [
+    "inoreader-accounts-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "inoreader-oauth2-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "inoreader-reader-api-openapi.yml: previously refined output, superseded by openapi/_original/"
+  ]
 }
