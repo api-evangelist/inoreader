@@ -245,6 +245,24 @@ components:
       required:
       - term
       - filter_type
+    PostReaderApi0PreferenceStreamSetResponse:
+      type: object
+      properties:
+        body:
+          type: string
+          description: OK
+    PostReaderApi0DisableTagResponse:
+      type: object
+      properties:
+        OK:
+          type: string
+          description: Successful deletion
+    PostReaderApi0EditTagResponse:
+      type: object
+      properties:
+        body:
+          type: string
+          description: OK
     PostReaderApi0ActiveSearchCreateResponse:
       type: object
       properties:
@@ -257,27 +275,9 @@ components:
         '202':
           type: string
           description: 'JSON response with "error", full detailed object with errors during process of validation. May include additional keys: "accountLimit" (integer), "userOutput" ("1"), "needUpgrade" ("1").'
-    PostReaderApi0EditTagResponse:
-      type: object
-      properties:
-        body:
-          type: string
-          description: OK
-    PostReaderApi0PreferenceStreamSetResponse:
-      type: object
-      properties:
-        body:
-          type: string
-          description: OK
     PostReaderApi0RenameTagResponse:
       type: object
       properties:
         OK:
           type: string
           description: Successful rename operation
-    PostReaderApi0DisableTagResponse:
-      type: object
-      properties:
-        OK:
-          type: string
-          description: Successful deletion
