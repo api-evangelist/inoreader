@@ -94,6 +94,8 @@ apis:
   description: The Accounts API from Inoreader — 1 operation(s) for accounts.
   humanURL: https://www.inoreader.com/developers/
   tags:
+  - Account
+  tags_raw:
   - Accounts
   properties:
   - type: OpenAPI
@@ -115,6 +117,8 @@ apis:
   description: The Oauth2 API from Inoreader — 1 operation(s) for oauth2.
   humanURL: https://www.inoreader.com/developers/
   tags:
+  - Authentication
+  tags_raw:
   - Oauth2
   properties:
   - type: OpenAPI
