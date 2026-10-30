@@ -64,5 +64,138 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-Inoreader is a company surfaced via the API Evangelist harvest backlog (source: news) and added to the network as a stub for full-pipeline profiling.
-- https://inoreader.com/
+Inoreader provides a powerful RSS feed reader and content aggregation platform that lets users subscribe to, organize, and share web content. It offers features such as automated tagging, rules for filtering, offline access, and collaborative sharing for teams. The service includes a developer API that enables programmatic access to feed data, article content, and user actions, supporting integration with third‑party applications and custom workflows.
+
+**Areas:** Company · RSS · Content Aggregation · Productivity
+
+## Inoreader on APIs.io
+
+Everything profiled for Inoreader is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/inoreader/](https://apis.io/providers/inoreader/)** — or go straight to one of the APIs or properties below.
+
+### APIs (3)
+
+- [Inoreader Accounts API](https://apis.io/apis/inoreader/inoreader-accounts-api/) — The Accounts API from Inoreader — 1 operation(s) for accounts.
+- [Inoreader Oauth2 API](https://apis.io/apis/inoreader/inoreader-oauth2-api/) — The Oauth2 API from Inoreader — 1 operation(s) for oauth2.
+- [Inoreader Reader API](https://apis.io/apis/inoreader/inoreader-reader-api/) — The Reader API from Inoreader — 8 operation(s) for reader.
+
+### Published properties
+
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
+
+#### MCP servers (1)
+
+Model Context Protocol servers that expose the API to agents.
+
+- [inoreader-mcp.yml](https://apis.io/servers/inoreader/inoreader-mcp-yml/)
+
+#### JSON Schema (6)
+
+The data models the API reads and writes.
+
+- [PostAccountsClientloginResponse](https://apis.io/schemas/inoreader/inoreader-post-accounts-clientlogin-response/)
+- [PostOauth2TokenRequest](https://apis.io/schemas/inoreader/inoreader-post-oauth2-token-request/)
+- [PostOauth2TokenResponse](https://apis.io/schemas/inoreader/inoreader-post-oauth2-token-response/)
+- [PostReaderApi0ActiveSearchCreateRequest](https://apis.io/schemas/inoreader/inoreader-post-reader-api0-active-search-create-request/)
+- [PostReaderApi0ActiveSearchCreateResponse](https://apis.io/schemas/inoreader/inoreader-post-reader-api0-active-search-create-response/)
+- [PostReaderApi0RenameTagResponse](https://apis.io/schemas/inoreader/inoreader-post-reader-api0-rename-tag-response/)
+
+#### JSON-LD (1)
+
+Linked-data contexts for the provider's vocabulary.
+
+- [Inoreader Context](https://apis.io/jsonld/inoreader/inoreader-context/)
+
+#### Governance rules (1)
+
+Spectral rulesets for the provider's contracts.
+
+- [Inoreader API Rules](https://apis.io/rules/inoreader/inoreader-rules/)
+
+#### Security (1)
+
+Authentication, trust centre, and vulnerability disclosure.
+
+- [Inoreader Domain Security](https://apis.io/security/inoreader/inoreader-domain-security/)
+
+#### Plans and pricing (1)
+
+Published plans, tiers and prices.
+
+- [Inoreader Plans Pricing](https://apis.io/plans/inoreader/inoreader-plans-pricing/)
+
+#### Rate limits (1)
+
+Published request limits.
+
+- [Inoreader Rate Limits](https://apis.io/rate-limits/inoreader/inoreader-rate-limits/)
+
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
+
+- [Website](https://inoreader.com/)
+- [Documentation](https://www.inoreader.com/developers/)
+- [Getting started](https://www.inoreader.com/developers/register-app)
+- [API reference](https://www.inoreader.com/developers/api-endpoint)
+- [Pricing](https://www.inoreader.com/pricing)
+- [Sign up](https://www.inoreader.com/signup)
+- [Support](https://www.inoreader.com/contact)
+- [Blog](https://www.inoreader.com/blog)
+- [Terms of service](https://www.inoreader.com/tos)
+- [Privacy policy](https://www.inoreader.com/privacy_policy)
+- [Status](https://status.inoreader.com/)
+
+## API Evangelist rating
+
+**Kin Score 46.5** — developing · rubric 0.25.0 · scored 2026-10-23
+
+| Facet | Score |
+|---|---|
+| Discoverability | 55.4 |
+| Contract quality | 23.8 |
+| Contract governance | 22.0 |
+| Operational transparency | 52.6 |
+| Developer ergonomics | 52.4 |
+| Access clarity | 76.3 |
+
+**Agent readiness 17.3** — agent-aware
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | yes |
+| Agentic Access | — |
+| Reversibility Documented | — |
+| MCP Server | — |
+| Auth Clarity | — |
+| Idempotency | — |
+| Error Semantics | — |
+| OpenAPI Examples | — |
+| Rate Limit Signal | documented (partial credit) |
+| Event Surface Described | — |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+| Pagination Ratio | na |
+| Operation Distinctiveness | distinct |
+
+**Regulatory alignment 18.6** — Horizontal (data, software, accessibility, platform)
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/inoreader/](https://apis.io/providers/inoreader/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for Inoreader: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/inoreader/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
